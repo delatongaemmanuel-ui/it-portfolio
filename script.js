@@ -59,15 +59,16 @@ document.addEventListener("keydown", (e) => {
 
 // Interactive Hanging Lanyard ID (Gravity Pendulum Physics)
 const lanyardStage = document.querySelector(".lanyard-stage");
+const isMobileView = () => window.matchMedia("(max-width: 740px)").matches;
+
+let isDragging = false;
+let startX = 0;
+let angle = 0;          // degrees
+let angularVel = 0;     // deg/sec
+let rafId = null;
+let lastTime = 0;
 
 if (lanyardStage) {
-  let isDragging = false;
-  let startX = 0;
-  let angle = 0;          // degrees
-  let angularVel = 0;     // deg/sec
-  let rafId = null;
-  let lastTime = 0;
-
   const MAX_ANGLE = 34;
   const GRAVITY_STIFFNESS = 42; // higher = snappier gravity pull
   const DAMPING = 4.2;          // air/strap damping so it swings then settles
@@ -118,6 +119,8 @@ if (lanyardStage) {
 
   const startDrag = (clientX) => {
     stopLoop();
+    lanyardStage.classList.remove("mobile-drop-ready", "mobile-drop-animate");
+    lanyardStage.style.opacity = "1";
     isDragging = true;
     startX = clientX;
     angularVel = 0;
@@ -154,4 +157,64 @@ if (lanyardStage) {
 
   lanyardStage.addEventListener("pointerup", endDrag);
   lanyardStage.addEventListener("pointercancel", endDrag);
+}
+
+// F1 Starting Lights Preloader + Mobile ID Drop
+const preloader = document.getElementById("f1Preloader");
+const preloaderStatus = document.getElementById("preloaderStatus");
+const gantryLights = preloader ? Array.from(preloader.querySelectorAll(".gantry-light")) : [];
+
+if (lanyardStage && isMobileView()) {
+  lanyardStage.classList.add("mobile-drop-ready");
+}
+
+function triggerMobileIdDrop() {
+  if (!lanyardStage || !isMobileView() || isDragging) return;
+  lanyardStage.classList.remove("mobile-drop-ready");
+  void lanyardStage.offsetWidth;
+  lanyardStage.classList.add("mobile-drop-animate");
+  setTimeout(() => {
+    if (!isDragging) {
+      lanyardStage.classList.remove("mobile-drop-animate");
+      lanyardStage.style.transform = "rotate(0deg)";
+      lanyardStage.style.opacity = "1";
+    }
+  }, 900);
+}
+
+function finishPreloader() {
+  if (!preloader) {
+    triggerMobileIdDrop();
+    return;
+  }
+  preloader.classList.add("done");
+  triggerMobileIdDrop();
+  setTimeout(() => {
+    preloader.remove();
+  }, 500);
+}
+
+if (preloader && gantryLights.length > 0) {
+  let step = 0;
+  const lightTimer = setInterval(() => {
+    if (step < gantryLights.length) {
+      gantryLights[step].classList.add("lit");
+      if (preloaderStatus) {
+        preloaderStatus.textContent = `GRID LIGHT ${step + 1} / ${gantryLights.length}`;
+      }
+      step += 1;
+    } else {
+      clearInterval(lightTimer);
+      gantryLights.forEach((light) => {
+        light.classList.remove("lit");
+        light.classList.add("go");
+      });
+      if (preloaderStatus) {
+        preloaderStatus.textContent = "LIGHTS OUT — GREEN FLAG";
+      }
+      setTimeout(finishPreloader, 260);
+    }
+  }, 190);
+} else {
+  finishPreloader();
 }
