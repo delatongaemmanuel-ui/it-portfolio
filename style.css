@@ -964,7 +964,11 @@ body {
     gap: 28px;
   }
   .lanyard-stage {
+    order: -1;
     align-items: center;
+  }
+  .hero-main {
+    order: 0;
   }
   .driver-card.id-pass {
     max-width: 300px;
@@ -992,7 +996,7 @@ body {
     padding-bottom: 52px;
   }
   .lanyard-strap {
-    height: 235px;
+    height: 150px;
   }
   .lanyard-stage.mobile-drop-ready {
     transform: translateY(-120vh) rotate(0deg);
