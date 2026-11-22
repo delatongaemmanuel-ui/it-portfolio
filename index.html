@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DELA TONGA // F1 Telemetry & UI/UX Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- F1 Circuit Grid & Redline Glow -->
+  <div class="f1-grid"></div>
+  <div class="f1-glow"></div>
+
+  <!-- Pit Wall Top Bar -->
+  <header class="pitwall-header">
+    <div class="container pitwall-inner">
+      <a href="#" class="f1-brand">
+        <span class="car-no">14</span>
+        <span class="driver-name">DELA TONGA</span>
+        <span class="sector-pill">BSIT // UI-UX</span>
+      </a>
+
+      <nav class="pit-nav">
+        <a href="#stints">Stints</a>
+        <a href="#telemetry">Telemetry</a>
+        <a href="#career">Grid</a>
+        <a href="#radio">Team Radio</a>
+      </nav>
+
+      <a href="assets/resume.pdf" target="_blank" class="pit-btn">CV Dossier ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Timing Tower -->
+    <section class="hero">
+      <div class="hero-bg-photo" aria-hidden="true"></div>
+      <div class="hero-bg-scrim" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-main">
+          <div class="flag-bar">
+            <span class="flag-green"></span>
+            <span>GREEN FLAG • OJT READY • MANILA, PH</span>
+          </div>
+
+          <h1 class="hero-title">
+            Apex UI/UX.<br>
+            <span class="f1-red">Race-Grade</span> Web & Asset Craft.
+          </h1>
+
+          <p class="hero-lead">
+            I'm <strong>Emmanuel C. dela Tonga</strong>, a 4th-year BSIT student at Universidad de Manila focused on responsive front-end interfaces, UI/UX wireframing & prototyping, pixel-art sprite sheets, and full-stack builds.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#stints" class="btn btn-primary">Inspect Project Stints ↓</a>
+            <a href="https://www.linkedin.com/in/emmanueldt/" target="_blank" class="btn btn-secondary">LinkedIn ↗</a>
+            <a href="#radio" class="btn btn-secondary">Pit Radio / Contact</a>
+          </div>
+        </div>
+
+        <!-- Hanging Pit Pass / F1 Driver ID -->
+        <aside class="lanyard-stage">
+          <div class="lanyard-strap" aria-hidden="true">
+            <span>DELA TONGA • PADDOCK PASS</span>
+          </div>
+          <div class="lanyard-clip" aria-hidden="true"></div>
+
+          <div class="driver-card id-pass spotlight">
+            <div class="pass-header">
+              <span class="pass-type">PADDOCK // OJT PASS</span>
+              <span class="pass-no">#14</span>
+            </div>
+            <div class="id-slot" aria-hidden="true"></div>
+
+            <div class="driver-photo-wrap">
+              <img src="assets/driver-portrait.jpg" alt="Emmanuel C. dela Tonga ID photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="driver-fallback">Add photo: assets/driver-portrait.jpg</div>
+            </div>
+
+            <div class="driver-meta">
+              <span class="driver-tag">BSIT • UI/UX & FRONT-END</span>
+              <strong>EMMANUEL C. DELA TONGA</strong>
+              <small>Tondo, Manila • Car #14</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Timing Strip (3 Sectors) -->
+      <div class="container">
+        <div class="timing-strip">
+          <div class="sector-card spotlight">
+            <span class="sec-code purple">SECTOR 01 // FRONT-END & UI</span>
+            <strong>HTML • CSS • JS • UI/UX</strong>
+            <small>Wireframes, prototypes & responsive layouts</small>
+          </div>
+          <div class="sector-card spotlight">
+            <span class="sec-code green">SECTOR 02 // VISUAL & GAME</span>
+            <strong>Pixel Art • Photoshop • Video</strong>
+            <small>Sprite sheets, 2D game craft & AI workflows</small>
+          </div>
+          <div class="sector-card spotlight">
+            <span class="sec-code amber">SECTOR 03 // SYSTEMS & DATA</span>
+            <strong>Laravel • Regression • Docs</strong>
+            <small>Back-end logic, spreadsheets & reporting</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Stints (Screenshot Showcase) -->
+    <section id="stints" class="section container">
+      <div class="section-hdr">
+        <span class="mono-kicker">01 // RACE STINTS & SCREENSHOTS</span>
+        <h2>Selected Builds</h2>
+        <p class="hdr-sub">Click any screenshot frame to view full-size.</p>
+      </div>
+
+      <div class="stints-grid">
+        <!-- Stint 1: Car Rental Website -->
+        <article class="stint-card spotlight">
+          <div class="shot-frame" data-shot="assets/car-rental.png" data-title="Car Rental Website">
+            <img src="assets/car-rental.png" alt="Car Rental Website screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="shot-fallback">Add screenshot: assets/car-rental.png</div>
+            <span class="shot-zoom">EXPAND ⤢</span>
+          </div>
+          <div class="stint-body">
+            <div class="stint-top">
+              <span class="compound soft">SOFT // WEB UI</span>
+              <span class="lap-tag">STINT 01</span>
+            </div>
+            <h3>Car Rental Website</h3>
+            <p>
+              Designed and implemented a vehicle rental platform with dynamic front-end components and streamlined booking interfaces using HTML, CSS, and JavaScript.
+            </p>
+            <div class="spec-pills">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Booking UI</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stint 2: Knight Adventure 2D Game -->
+        <article class="stint-card spotlight">
+          <div class="shot-frame" data-shot="assets/knight-game.png" data-title="Knight Adventure 2D Game & Asset Design">
+            <img src="assets/knight-game.png" alt="Knight Adventure 2D Game screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="shot-fallback">Add screenshot: assets/knight-game.png</div>
+            <span class="shot-zoom">EXPAND ⤢</span>
+          </div>
+          <div class="stint-body">
+            <div class="stint-top">
+              <span class="compound medium">MEDIUM // 2D GAME</span>
+              <span class="lap-tag">STINT 02</span>
+            </div>
+            <h3>Knight Adventure 2D Game & Asset Design</h3>
+            <p>
+              Conceptualized a 2D game prototype and hand-crafted custom pixel-art sprite sheets, character movement animations, and game environment assets.
+            </p>
+            <div class="spec-pills">
+              <span>Pixel Art</span>
+              <span>Sprite Animation</span>
+              <span>Game Prototype</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stint 3: EcoSort -->
+        <article class="stint-card spotlight">
+          <div class="shot-frame" data-shot="assets/ecosort.png" data-title="EcoSort: Data-Driven Waste Management System">
+            <img src="assets/ecosort.png" alt="EcoSort Waste Management System screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="shot-fallback">Add screenshot: assets/ecosort.png</div>
+            <span class="shot-zoom">EXPAND ⤢</span>
+          </div>
+          <div class="stint-body">
+            <div class="stint-top">
+              <span class="compound hard">HARD // LARAVEL & DATA</span>
+              <span class="lap-tag">STINT 03</span>
+            </div>
+            <h3>EcoSort: Data-Driven Waste Management System</h3>
+            <p>
+              Developed a full-stack Laravel web application for barangays incorporating linear regression models, analytics, and reporting to assist operations.
+            </p>
+            <div class="spec-pills">
+              <span>Laravel</span>
+              <span>Linear Regression</span>
+              <span>Analytics</span>
+              <span>Reporting</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Stint 4: Pokémon Forum -->
+        <article class="stint-card spotlight">
+          <div class="shot-frame" data-shot="assets/pokeforum.png" data-title="Pokémon-Themed Community Forum">
+            <img src="assets/pokeforum.png" alt="Pokémon-Themed Community Forum screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="shot-fallback">Add screenshot: assets/pokeforum.png</div>
+            <span class="shot-zoom">EXPAND ⤢</span>
+          </div>
+          <div class="stint-body">
+            <div class="stint-top">
+              <span class="compound soft">SOFT // FRONT-END & DB</span>
+              <span class="lap-tag">STINT 04</span>
+            </div>
+            <h3>Pokémon-Themed Community Forum</h3>
+            <p>
+              Built a real-time discussion and feedback forum styled after Pokédex aesthetics with formatted timestamps and reverse-chronological sorting.
+            </p>
+            <div class="spec-pills">
+              <span>HTML & CSS</span>
+              <span>JavaScript</span>
+              <span>Firebase Firestore</span>
+              <span>UI Styling</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Telemetry / Technical Skills -->
+    <section id="telemetry" class="section container">
+      <div class="section-hdr">
+        <span class="mono-kicker">02 // CAR TELEMETRY & SKILLS</span>
+        <h2>Technical Spec Sheet</h2>
+      </div>
+
+      <div class="telemetry-grid">
+        <div class="telem-card spotlight">
+          <h3>Front-End & UI/UX</h3>
+          <ul>
+            <li>Front-End Web Development</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>UI/UX Designing, Prototyping & Wireframe</li>
+          </ul>
+        </div>
+
+        <div class="telem-card spotlight">
+          <h3>Game, Media & AI</h3>
+          <ul>
+            <li>Pixel-Art & Sprite Animation</li>
+            <li>Photoshop & Video Editing</li>
+            <li>Prompt Engineering</li>
+            <li>Back-End Development</li>
+          </ul>
+        </div>
+
+        <div class="telem-card spotlight">
+          <h3>Docs & Data</h3>
+          <ul>
+            <li>Documentation</li>
+            <li>Spreadsheets</li>
+            <li>Slide Presentations</li>
+            <li>Analytics & Regression Workflows</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career / Starting Grid -->
+    <section id="career" class="section container">
+      <div class="section-hdr">
+        <span class="mono-kicker">03 // STARTING GRID & EXPERIENCE</span>
+        <h2>Education & Background</h2>
+      </div>
+
+      <div class="grid-cards">
+        <div class="grid-item spotlight">
+          <span class="pos-tag">P1 // 2023 – PRESENT</span>
+          <h3>Universidad de Manila</h3>
+          <p class="sub">Bachelor of Science in Information Technology (4th Year)</p>
+          <p class="note">Building responsive web interfaces, UI/UX wireframes, 2D game assets, and Laravel systems.</p>
+        </div>
+
+        <div class="grid-item spotlight">
+          <span class="pos-tag">P2 // WORK IMMERSION</span>
+          <h3>Florentino Torres High School</h3>
+          <p class="sub">ICT Strand — Work Immersion Program</p>
+          <p class="note">Completed practical training focused on foundational computer systems and technical documentation.</p>
+        </div>
+
+        <div class="grid-item spotlight">
+          <span class="pos-tag">P3 // 2017 – 2023</span>
+          <h3>Secondary Schools</h3>
+          <p class="sub">Florentino Torres SHS (2021–2023) & Lakandula HS (2017–2021)</p>
+          <p class="note">Developed early ICT skills and creative media fundamentals in Tondo, Manila.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Radio / Contact -->
+    <section id="radio" class="section container">
+      <div class="radio-box spotlight">
+        <span class="mono-kicker">04 // BOX BOX — TEAM RADIO</span>
+        <h2>Available for OJT & Roles</h2>
+        <p>
+          1336 R.A. Reyes St., Tondo, Manila • Ready to contribute to front-end, UI/UX, and creative tech teams.
+        </p>
+        <div class="radio-actions">
+          <a href="mailto:delatongaemmanuel@gmail.com" class="btn btn-primary">delatongaemmanuel@gmail.com</a>
+          <a href="tel:+639625054795" class="btn btn-secondary">+63 962 505 4795</a>
+          <a href="https://www.linkedin.com/in/emmanueldt/" target="_blank" class="btn btn-secondary">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>Emmanuel C. dela Tonga // Tondo, Manila</span>
+    <span>© <span id="year"></span> F1 Pit-Wall Portfolio</span>
+  </footer>
+
+  <!-- Screenshot Lightbox Modal -->
+  <div id="shotModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-bar">
+        <span id="modalTitle">Screenshot Preview</span>
+        <button id="modalClose" type="button" aria-label="Close preview">✕</button>
+      </div>
+      <img id="modalImg" src="" alt="Expanded project screenshot">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
